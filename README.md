@@ -1,4 +1,4 @@
 wear-doodles
 ============
 
-Bullshitting repository for Android Wear tests
+For Android Wear testing
