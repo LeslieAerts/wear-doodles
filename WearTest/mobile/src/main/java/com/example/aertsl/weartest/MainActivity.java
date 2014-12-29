@@ -5,13 +5,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.aertsl.weartest.util.NotificationMaker;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    NotificationMaker maker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        maker = new NotificationMaker(getApplicationContext());
     }
 
 
@@ -31,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            maker.createNotif();
         }
 
         return super.onOptionsItemSelected(item);
